@@ -19,11 +19,8 @@ jobs:
           - '5.26'
           - '5.28'
           - '5.30'
-        test-clean: ['', 1]
     container:
       image: perl:${{ matrix.perl-version }}
-      env:
-        TEST_CLEAN: ${{ matrix.test-clean }}
     steps:
       - uses: actions/checkout@v1
       - name: perl -V
